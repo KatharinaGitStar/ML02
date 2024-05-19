@@ -8,6 +8,8 @@ public class Event {
     private Venue venue;
 
     public Event(){
+        this.artist = new Artist();
+        this.description = "";
     }
 
     public Artist getArtist() {
@@ -25,7 +27,11 @@ public class Event {
         this.venue = venue;
     }
     public Date getDate() {
-        return new Date(date);
+        if(date == null){
+            return null;
+        }else {
+            return new Date(date);
+        }
     }
     public void setDate(Date date) {
         if(date != null) {
@@ -49,6 +55,9 @@ public class Event {
     public void setDescription(String description) {
         if(description != null){
             this.description = description;
+        }
+        else{
+            this.description = "";
         }
     }
 }
