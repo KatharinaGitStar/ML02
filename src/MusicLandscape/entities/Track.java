@@ -9,7 +9,7 @@ public class Track {
 
     //default constructor
     public Track(){
-        this.title = "unknown";
+        this.title = null;
         this.duration = 0;
         this.writer = new Artist("Default writer");
         this.performer = new Artist("Default performer");
